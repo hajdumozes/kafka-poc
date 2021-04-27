@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 public class KafkaStringConsumer {
 
     @Bean
-    public Consumer<String> processMessages() {
+    public Consumer<String> consumeMessages() {
         return message -> log.info("Received message: {}", message);
     }
 

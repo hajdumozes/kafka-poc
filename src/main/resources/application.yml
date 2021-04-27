@@ -1,9 +1,9 @@
 spring.cloud.stream:
   function:
-    definition: sendMessages;processMessages
+    definition: produceMessages;consumeMessages
     bindings:
-      sendMessages-out-0: kafka-string-output
-      processMessages-in-0: kafka-string-input
+      produceMessages-out-0: kafka-string-output
+      consumeMessages-in-0: kafka-string-input
   bindings:
     kafka-string-output:
       destination: ${KAFKA_STRING_TOPIC}

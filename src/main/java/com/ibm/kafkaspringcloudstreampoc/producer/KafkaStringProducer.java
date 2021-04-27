@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 public class KafkaStringProducer {
 
     @Bean
-    public Supplier<String> sendMessages() {
+    public Supplier<String> produceMessages() {
         return this::logAndSend;
     }
 
