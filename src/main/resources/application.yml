@@ -1,9 +1,13 @@
 spring.cloud.stream:
   function:
+    definition: sendMessages;processMessages
     bindings:
       sendMessages-out-0: kafka-string-output
+      processMessages-in-0: kafka-string-input
   bindings:
     kafka-string-output:
+      destination: ${KAFKA_STRING_TOPIC}
+    kafka-string-input:
       destination: ${KAFKA_STRING_TOPIC}
   default-binder: kafka
   kafka:
