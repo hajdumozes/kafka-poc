@@ -1,7 +1,7 @@
 ## Kafka Spring Cloud Stream POC
 
 ### Description
-A simple app, that sets an example how to use and consume messages with spring cloud stream (kafka implementation), including strings and pojos.
+A simple app, that sets an example how to use and produce, consume, and process messages with spring cloud stream (kafka implementation).
 
 ### How to use
 - you need a running kafka instance
@@ -22,6 +22,6 @@ Configs could be done in the application.yml file.
 
 ### Default environment variables
 
-- BROKERS: host + port of the kafka instance
-- KAFKA_STRING_TOPIC: kafka topic for ids
-- KAFKA_POJO_TOPIC: kafka topic for requests
+- `BROKERS` - host + port of the kafka instance
+- `KAFKA_STRING_TOPIC` - kafka topic for ids
+- `KAFKA_POJO_TOPIC` - kafka topic for requests
