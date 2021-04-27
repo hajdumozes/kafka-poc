@@ -6,7 +6,7 @@ A simple app, that sets an example how to use and consume messages with spring c
 ### How to use
 - you need a running kafka instance
 - you need to create your own topics with kafka terminal
-eg.: bin/kafka-topics.sh --create --topic kafka-test --bootstrap-server localhost:9093
+eg.: `bin/kafka-topics.sh --create --topic kafka-test --bootstrap-server localhost:9093`
 - set environment variables required in application.yml
 - check application.yml and set your functions/bindings
 
@@ -20,7 +20,8 @@ Configs could be done in the application.yml file.
 - you need to config your bindings in the following way: 
     `spring.cloud.stream.bindings.{YOUR_BINDING_NAME}.destination: {DESIRED_TOPIC}`
 
-### Env vars
+### Default environment variables
 
-- BROKERS: host + port
-- TOPIC: kafka topic
+- BROKERS: host + port of the kafka instance
+- KAFKA_STRING_TOPIC: kafka topic for ids
+- KAFKA_POJO_TOPIC: kafka topic for requests
