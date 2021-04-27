@@ -2,12 +2,12 @@ package com.ibm.kafkaspringcloudstreampoc.producer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 import java.util.function.Supplier;
 
-@Service
+@Component
 @Slf4j
 public class KafkaIdProducer {
 
