@@ -1,10 +1,21 @@
 ## Kafka Spring Cloud Stream POC
 
+### Description
+A simple app, that sets an example how to use and consume messages with spring cloud stream (kafka implementation), including strings and pojos.
+
+How to use
+- you need a running kafka instance
+- you need to create your own topics with kafka terminal
+eg.: bin/kafka-topics.sh --create --topic kafka-test --bootstrap-server localhost:9093
+- set environment variables required in application.yml
+
 ### Configuration
 
 Configs could be done in the application.yml file.
-- in the function bindings add/replace your method name, which sends the data, and the value should be a binding.
-- in the bindings, set the destination to your topic. Note that that binding should be the same as in the function.
+- you need to config your functions in the following way: 
+    `spring.cloud.stream.function.bindings.{YOUR_METHOD_NAME}-{out/in}-0: {YOUR_BINDING_NAME}`
+- you need to config your bindings in the following way: 
+    `spring.cloud.stream.bindings.{YOUR_BINDING_NAME}.destination: {DESIRED_TOPIC}`
 
 ### Env vars
 
