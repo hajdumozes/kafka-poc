@@ -15,8 +15,6 @@ eg.: bin/kafka-topics.sh --create --topic kafka-test --bootstrap-server localhos
 Configs could be done in the application.yml file.
 - you need to list your functions in `spring.cloud.stream.function.definition`. 
     - you can separate them with `;` (without space!), eg.: `foo;bar`
-    - Consumers and Suppliers only need the name
-    - Functions need both params, which you can give with `|`˙, eg.: `baz|baz`
 - you need to config your functions in the following way: 
     `spring.cloud.stream.function.bindings.{YOUR_METHOD_NAME}-{out/in}-0: {YOUR_BINDING_NAME}`
 - you need to config your bindings in the following way: 

@@ -1,14 +1,16 @@
 spring.cloud.stream:
   function:
-    definition: produceMessages;consumeMessages
+    definition: produceMessages;processMessages;consumeMessages
     bindings:
-      produceMessages-out-0: kafka-string-output
-      consumeMessages-in-0: kafka-string-input
+      produceMessages-out-0: kafka-id
+      consumeMessages-in-0: kafka-request
+      processMessages-in-0: kafka-id
+      processMessages-out-0: kafka-request
   bindings:
-    kafka-string-output:
+    kafka-id:
       destination: ${KAFKA_STRING_TOPIC}
-    kafka-string-input:
-      destination: ${KAFKA_STRING_TOPIC}
+    kafka-request:
+      destination: ${KAFKA_POJO_TOPIC}
   default-binder: kafka
   kafka:
     binder:

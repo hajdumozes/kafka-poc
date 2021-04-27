@@ -9,16 +9,16 @@ import java.util.function.Supplier;
 
 @Service
 @Slf4j
-public class KafkaStringProducer {
+public class KafkaIdProducer {
 
     @Bean
-    public Supplier<String> produceMessages() {
+    public Supplier<UUID> produceMessages() {
         return this::logAndSend;
     }
 
-    private String logAndSend() {
+    private UUID logAndSend() {
         UUID uuid = UUID.randomUUID();
         log.info("Sending random id: {}", UUID.randomUUID());
-        return uuid.toString();
+        return uuid;
     }
 }
