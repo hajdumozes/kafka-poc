@@ -3,11 +3,12 @@
 ### Description
 A simple app, that sets an example how to use and consume messages with spring cloud stream (kafka implementation), including strings and pojos.
 
-How to use
+### How to use
 - you need a running kafka instance
 - you need to create your own topics with kafka terminal
 eg.: bin/kafka-topics.sh --create --topic kafka-test --bootstrap-server localhost:9093
 - set environment variables required in application.yml
+- check application.yml and set your functions/bindings
 
 ### Configuration
 
