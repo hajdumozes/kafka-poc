@@ -1,0 +1,12 @@
+spring.cloud.stream:
+  function:
+    bindings:
+      sendMessages-out-0: kafka-string-output
+  bindings:
+    kafka-string-output:
+      destination: ${KAFKA_STRING_TOPIC}
+  default-binder: kafka
+  kafka:
+    binder:
+      brokers: ${SERVER}
+      auto-create-topics: false
