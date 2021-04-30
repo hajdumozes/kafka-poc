@@ -6,4 +6,6 @@ import java.util.UUID;
 import java.util.function.Function;
 
 public interface KafkaIdProcessor extends Function<UUID, Request> {
+
+    Request apply(UUID uuid);
 }

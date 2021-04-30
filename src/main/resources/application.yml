@@ -1,9 +1,8 @@
 spring.cloud.stream:
   function:
-    definition: produceMessages;processMessages;consumeMessages;produceMessagesReactively
+    definition: produceMessages;processMessages;consumeMessages
     bindings:
       produceMessages-out-0: kafka-id
-      produceMessagesReactively-out-0: kafka-id
       consumeMessages-in-0: kafka-request
       processMessages-in-0: kafka-id
       processMessages-out-0: kafka-request
