@@ -8,6 +8,4 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public interface KafkaIdProducer extends Function<Sinks.Many<UUID>, Supplier<Flux<UUID>>> {
-
-    void addToFlux(UUID uuid, Sinks.Many<UUID> uuidSink);
 }

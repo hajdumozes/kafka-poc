@@ -16,10 +16,4 @@ class KafkaIdProducerImpl implements KafkaIdProducer {
     public Supplier<Flux<UUID>> apply(Sinks.Many<UUID> uuidSink) {
         return uuidSink::asFlux;
     }
-
-    @Override
-    public void addToFlux(UUID uuid, Sinks.Many<UUID> uuidSink) {
-        log.info("Added id ({}) to reactive queue", uuid);
-        uuidSink.tryEmitNext(uuid);
-    }
 }
