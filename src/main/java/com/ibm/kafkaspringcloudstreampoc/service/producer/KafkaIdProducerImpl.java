@@ -19,6 +19,7 @@ class KafkaIdProducerImpl implements KafkaIdProducer {
     @Override
     public void produce(UUID uuid) {
         uuidSink.tryEmitNext(uuid);
+        log(uuid);
     }
 
     private void log(UUID uuid) {
