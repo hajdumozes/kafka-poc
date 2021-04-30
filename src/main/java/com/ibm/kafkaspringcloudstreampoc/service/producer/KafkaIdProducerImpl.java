@@ -23,6 +23,6 @@ class KafkaIdProducerImpl implements KafkaIdProducer {
     }
 
     private void log(UUID uuid) {
-        log.info("Added id ({}) to non-reactive queue", uuid);
+        log.info("Added id ({}) to non-scheduled queue", uuid);
     }
 }

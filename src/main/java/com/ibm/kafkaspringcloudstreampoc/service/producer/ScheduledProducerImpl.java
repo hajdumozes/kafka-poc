@@ -22,6 +22,6 @@ class ScheduledProducerImpl implements ScheduledProducer {
     public void addToFlux() {
         UUID uuid = UUID.randomUUID();
         uuidSink.tryEmitNext(uuid);
-        log.info("Added id ({}) to reactive queue", uuid);
+        log.info("Added id ({}) to scheduled queue", uuid);
     }
 }
